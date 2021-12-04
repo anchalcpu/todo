@@ -21,24 +21,8 @@
 
 <p><button ng-click="remove()">Remove marked</button></p>
 
-<script>
-var app = angular.module('myApp', []); 
-app.controller('todoCtrl', function($scope) {
-    $scope.todoList = [];
+<script src="app.js">
 
-    $scope.todoAdd = function() {
-        $scope.todoList.push({todoText:$scope.todoInput, done:false});
-        $scope.todoInput = "";
-    };
-
-    $scope.remove = function() {
-        var oldList = $scope.todoList;
-        $scope.todoList = [];
-        angular.forEach(oldList, function(x) {
-            if (!x.done) $scope.todoList.push(x);
-        });
-    };
-});
 </script>
 
 </body>
